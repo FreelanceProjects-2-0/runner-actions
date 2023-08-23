@@ -11,20 +11,14 @@ jobs:
     
     steps:
       - name: Check for config file in repo
-        uses: andstor/file-existence-action@v1
-        with:
-          files: ".gitignore"
-      - name: log
         run: |
+          echo "Checking for config file"
+          if [[ -f .gitignore ]]
+          then
+                  echo "Config file exists"
+                  HasConfigFile=true
+          else
+                  echo "Config file does not exist"
+                  HasConfigFile=false
+          fi
           echo "Test : $HasConfigFile"
-        #run: |
-        #  echo "Checking for config file"
-        #  if [[ true ]]
-        #  then
-        #          echo "Config file exists"
-        #          HasConfigFile=true
-        #  else
-        #          echo "Config file does not exist"
-        #          HasConfigFile=false
-        #  fi
-        #  echo "Test : $HasConfigFile"
