@@ -1,0 +1,23 @@
+name: test
+on:
+  push:
+
+env:
+  HasConfigFile: false
+
+jobs:
+  action-1:
+    runs-on: [ubuntu-latest]
+    steps:
+      - name: Check for config file in repo
+        run: |
+          echo "Checking for config file"
+          if [[ true ]]
+          then
+                  echo "Config file exists"
+                  $hasConfigFile=true
+          else
+                  echo "Config file does not exist"
+                  $hasConfigFile=false
+          fi
+          echo $hasConfigFile
