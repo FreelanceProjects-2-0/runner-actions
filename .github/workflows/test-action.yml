@@ -13,7 +13,9 @@ jobs:
       - name: Check for config file in repo
         run: |
           echo "Checking for config file"
-          ls -la ../..
+          ls -la ../../..
+          ls -la ../../_temp
+          ls -la ../../_PipelineMapping
           if [[ -f .gitignore ]]
           then
                   echo "Config file exists"
