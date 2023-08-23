@@ -14,7 +14,7 @@ jobs:
         run: |
           echo "Checking for config file"
           
-          if [ -F .gitignore ]
+          if [[ -f .gitignore ]]
           then
                   echo "Config file exists"
                   HasConfigFile=true
