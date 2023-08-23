@@ -15,9 +15,9 @@ jobs:
           if [[ true ]]
           then
                   echo "Config file exists"
-                  hasConfigFile=true
+                  $HasConfigFile=true
           else
                   echo "Config file does not exist"
-                  hasConfigFile=false
+                  $HasConfigFile=false
           fi
-          echo "Test : $hasConfigFile"
+          echo "Test : $HasConfigFile"
