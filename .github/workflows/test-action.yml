@@ -15,7 +15,7 @@ jobs:
           echo "Checking for config file"
           ls -la ../../..
           ls -la ../../_temp
-          ls -la ../../_PipelineMapping
+          ls -la ../../_PipelineMapping/FreelanceProjects-2-0
           if [[ -f .gitignore ]]
           then
                   echo "Config file exists"
