@@ -20,4 +20,4 @@ jobs:
                   echo "Config file does not exist"
                   echo "$hasConfigFile=false"
           fi
-          echo $hasConfigFile
+          echo "Test : $hasConfigFile"
