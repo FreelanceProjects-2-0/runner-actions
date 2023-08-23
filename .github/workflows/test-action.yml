@@ -8,16 +8,23 @@ env:
 jobs:
   action-1:
     runs-on: [ubuntu-latest]
+    
     steps:
       - name: Check for config file in repo
+        uses: andstor/file-existence-action@v1
+        with:
+          files: "assets/${{ env.URL }}"
+      - name: log
         run: |
-          echo "Checking for config file"
-          if [[ true ]]
-          then
-                  echo "Config file exists"
-                  HasConfigFile=true
-          else
-                  echo "Config file does not exist"
-                  HasConfigFile=false
-          fi
           echo "Test : $HasConfigFile"
+        #run: |
+        #  echo "Checking for config file"
+        #  if [[ true ]]
+        #  then
+        #          echo "Config file exists"
+        #          HasConfigFile=true
+        #  else
+        #          echo "Config file does not exist"
+        #          HasConfigFile=false
+        #  fi
+        #  echo "Test : $HasConfigFile"
