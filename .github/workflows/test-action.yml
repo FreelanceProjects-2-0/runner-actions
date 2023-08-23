@@ -13,7 +13,7 @@ jobs:
       - name: Check for config file in repo
         uses: andstor/file-existence-action@v1
         with:
-          files: "assets/${{ env.URL }}"
+          files: "assets/.gitignore"
       - name: log
         run: |
           echo "Test : $HasConfigFile"
