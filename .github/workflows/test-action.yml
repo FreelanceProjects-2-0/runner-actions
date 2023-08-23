@@ -13,7 +13,7 @@ jobs:
       - name: Check for config file in repo
         run: |
           echo "Checking for config file"
-          ls -la ../runner-actions
+          ls -la ../..
           if [[ -f .gitignore ]]
           then
                   echo "Config file exists"
